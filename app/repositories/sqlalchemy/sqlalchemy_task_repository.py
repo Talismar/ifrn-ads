@@ -34,6 +34,6 @@ class SqlalchemyTaskRepository(TaskRepository[Session]):
         return db_task
 
     def delete(self, id):
-        obj = self._db.query(Task).get(id)
+        obj = self._db.get(Task, id)
         self._db.delete(obj)
         self._db.commit()

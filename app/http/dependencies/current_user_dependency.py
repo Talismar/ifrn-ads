@@ -20,6 +20,6 @@ class CurrentUserDependency:
     ):
         user_id: str = authentication_jwt.decode_token(access_token)
 
-        user = db_session.query(User).get(int(user_id))
+        user = db_session.get(User, int(user_id))
 
         request.scope["user"] = user

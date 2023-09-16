@@ -34,6 +34,6 @@ class SqlalchemyUserRepository(UserRepository[Session]):
         return db_user
 
     def delete(self, id):
-        obj = self._db.query(User).get(id)
+        obj = self._db.get(User, id)
         self._db.delete(obj)
         self._db.commit()

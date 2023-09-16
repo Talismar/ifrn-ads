@@ -1,2 +1,3 @@
-# ifrn-ads
-Este repositório contém códigos de atividades/projetos da disciplina de sistemas corporativos.
+# Atividade 01 FastAPI CRUD
+Nesta atividade eu criei uma API para um sistema de TODO LIST
+

@@ -14,7 +14,6 @@ class LocalSettings(AppBaseSettings):
 
 @lru_cache()
 def get_settings():
-    print("Setting local")
     return LocalSettings(_env_file=(".env.local"))
 
 
