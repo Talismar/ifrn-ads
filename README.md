@@ -8,3 +8,4 @@ Cada atividade/projeto da disciplina está contida em uma branch separada
 | Disciplina  | Atividade/Projeto | Link |
 | ----------- | --------- | --------- |
 | Sistemas Corporativos | FastAPI - CRUD | [enterprise-systems/fastapi-crud](https://github.com/Talismar/ifrn-ads/tree/enterpise-systems/fastapi-crud) |
+| Estrutura de dados não lineares | Tabela Hash | [nonlinear-data-structure/hash_table](https://github.com/Talismar/ifrn-ads/tree/nonlinear-data-structure/hash_table) |
