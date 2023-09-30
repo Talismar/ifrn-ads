@@ -2,9 +2,13 @@ from app.services.factories.make_task_service import make_task_service
 from fastapi import Depends, Request
 from app.services.task import TaskService
 from app.schemas.task import TaskPostRequestSchema, TaskPartialUpdateRequestSchema
+import asyncio
 
 
-def list_all(task_service: TaskService = Depends(make_task_service)):
+async def list_all(task_service: TaskService = Depends(make_task_service)):
+    # Adicionando simulação de um endpoint assincrono
+    # Quando este endpoint for chamado, o fastapi irá resolver em outra thread
+    await asyncio.sleep(10)
     return task_service.list_all()
 
 

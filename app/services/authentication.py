@@ -24,7 +24,7 @@ class AuthenticationService:
         if not user:
             raise HTTPException(
                 status_code=401,
-                detail="Incorrect username or password",
+                detail="Incorrect email or password",
                 headers={"WWW-Authenticate": "Bearer"},
             )
 

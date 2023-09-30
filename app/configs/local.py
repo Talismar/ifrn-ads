@@ -14,7 +14,7 @@ class LocalSettings(AppBaseSettings):
 
 @lru_cache()
 def get_settings():
-    return LocalSettings(_env_file=(".env.local"))
+    return LocalSettings(_env_file=(".env.local", ".env.production"))
 
 
 settings = get_settings()

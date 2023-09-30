@@ -19,6 +19,10 @@
 - [x] CRUD completo de usuário
 - [x] CRUD completo de tarefas
 - [x] Testes E2E
+- [x] Middleware
+- [x] Assincronismo
+- [x] Tarefa de background
+- [x] Inversão de controle por meio de injeção de dependência
 
 
 ### Pré-requisitos
