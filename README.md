@@ -12,3 +12,4 @@ Cada atividade/projeto da disciplina está contida em uma branch separada
 | Estrutura de dados não lineares | Árvore Binária | [nonlinear-data-structure/binary-tree](https://github.com/Talismar/ifrn-ads/tree/nonlinear-data-structure/binary-tree) |
 | Estrutura de dados não lineares | Algoritmos de ordenação e buscar | [nonlinear-data-structure/sort-search-algorithm](https://github.com/Talismar/ifrn-ads/tree/nonlinear-data-structure/sort-search-algorithm) |
 | Estrutura de dados não lineares | Desafio 02 | [nonlinear-data-structure/challenge-02](https://github.com/Talismar/ifrn-ads/tree/nonlinear-data-structure/challenge-02) |
+| Teste de software | Teste funcional - Identifier | [software-testing/functional-test-identifier](https://github.com/Talismar/ifrn-ads/tree/software-testing/functional-test-identifier) |
