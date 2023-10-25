@@ -109,7 +109,7 @@ function AStar(
 
           if (!openSet.includes(neighbor) || tempG < neighbor.g) {
             neighbor.g = tempG
-            neighbor.h = neighbor[algoritm](target) // Ou use calculateEuclideanDistance para distância euclidiana
+            neighbor.h = neighbor[algoritm](target)
             neighbor.f = neighbor.g + neighbor.h
             neighbor.parent = current
 
