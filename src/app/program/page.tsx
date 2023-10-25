@@ -1,17 +1,17 @@
 'use client'
 import Button from '@/components/Button'
 import Cell from '@/components/Cell'
-import useAStarSearch from '@/hooks/useStar'
+import useAStarSearch from '@/hooks/useAStarSearch'
 import { useSearchParams } from 'next/navigation'
 import { useEffect } from 'react'
 
 export default function Program() {
   const searchParams = useSearchParams()
   const {
-    gridState,
-    setConfig,
     run,
+    setConfig,
     handleChangeCellStatus,
+    gridState,
     wasFound,
     processFinished,
   } = useAStarSearch()
