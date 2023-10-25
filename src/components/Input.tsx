@@ -1,13 +1,9 @@
-import React, { ComponentProps } from 'react';
+import React, { ComponentProps } from 'react'
 
-interface InputProps extends ComponentProps<"input"> {
+type InputProps = ComponentProps<'input'>
 
+function Input({ ...rest }: InputProps) {
+  return <input type="text" className="rounded-md p-2 text-black" {...rest} />
 }
 
-function Input({...rest}: InputProps) {
-  return (
-    <input type="text" className='text-black p-2 rounded-md' {...rest} />
-  );
-}
-
-export default Input;
+export default Input
