@@ -17,3 +17,4 @@ Cada atividade/projeto da disciplina está contida em uma branch separada
 | Teste de software | Identificador de triangulo | [software-testing/functional-test-triangle-identifier](https://github.com/Talismar/ifrn-ads/tree/software-testing/functional-test-triangle-identifier) |
 | Sistemas Corporativos | CQRS | [enterprise-systems/activity-cqrs](https://github.com/Talismar/ifrn-ads/tree/enterpise-systems/activity-cqrs) |
 | Teste de software | Transformação de código e teste unitarios | [software-testing/functional-test-project-01](https://github.com/Talismar/ifrn-ads/tree/software-testing/functional-test-project-01) |
+| Teste de software | Cobertura de teste - Identifier | [software-testing/functional-test-identifier-coverage](https://github.com/Talismar/ifrn-ads/tree/software-testing/functional-test-identifier-coverage) |
