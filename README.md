@@ -1,14 +1,3 @@
 ## Especificações da atividade
 
-#### Interface Gráfica
-- [x] Mostrar os visitados
-- [x] Valores de G, H e F
-- [x] Carregar 3 labirintos e desenhar manual
-
-#### Algoritmo A*
-- [x] Distância de Manhattan
-- [x] Distância diagonal
-- [x] Distância euclidiana
-- [x] Múltiplos objetivos
-
-#### Algoritmo Guloso
+Predador e presa com o algoritmo A*. O predador dar dois passos e a presa 1 passo se distânciando do predador.
