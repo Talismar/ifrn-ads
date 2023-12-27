@@ -1,8 +1,19 @@
 ## Descrição do desafio
 
-Resolver os dois problemas na força bruta e medir o tempo de resolução
-
 ![Grafos](problema.png)
 
-## Resolução
-As resoluções estão nos arquivos grafo_01.py e grafo_02.py. O grafo 01 foi executado com êxito, porém o grafo 02 na minha máquina e por força bruta foi impossivel com o número de possibilidades, só foi possivel encontrar o caminho com 13 vértices no máximo.
+### Algoritmos para caminho mínimo
+
+Estude sobre o uso desses algoritmos e aplique o uso dele em um exemplo
+
+- Algoritmo de Dijkstra
+- Algoritmo de Prim                  
+- Algoritmo de Kruskal
+
+OBS: Usei esses algoritmos com o segundo grafo da imagem acima.
+
+- Algoritmo de Dijkstra: Saindo da cidade 1 para a cidade 18
+- Algoritmo de Prim: Encontrando a árvore genadora minima
+- Algoritmo de Kruskal: Encontrando a árvore genadora minima
+
+Os resultados desses algoritmos estão no arquivo **desafios.ipynb**
