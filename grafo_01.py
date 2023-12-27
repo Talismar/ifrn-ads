@@ -1,3 +1,7 @@
+import matplotlib.pyplot as plt
+import networkx as nx
+import numpy as np
+
 from utils import end_time_fun, start_time_fun
 
 
@@ -48,7 +52,7 @@ def caixeiro_viajante_forca_bruta(matriz_distancias):
     return melhores_permutacoes, menor_distancia
 
 
-def imprimir_matriz_com_menor_caminho(matriz_distancias: list[list[int | float]]):
+def matriz_com_menor_caminho(matriz_distancias: list[list[int | float]]):
     melhores_caminhos, menor_distancia = caixeiro_viajante_forca_bruta(
         matriz_distancias
     )
@@ -80,6 +84,8 @@ def imprimir_matriz_com_menor_caminho(matriz_distancias: list[list[int | float]]
 
     print("Menor Distância:", menor_distancia)
 
+    return melhores_caminhos
+
 
 # float("inf") representa que a ligação entre as duas vértices não existe
 matriz_distancias: list[list[int | float]] = [
@@ -91,10 +97,70 @@ matriz_distancias: list[list[int | float]] = [
 ]
 
 start_time = start_time_fun()
-imprimir_matriz_com_menor_caminho(matriz_distancias)
+melhor_caminho = matriz_com_menor_caminho(matriz_distancias)
 print("--- %s seconds ---" % (end_time_fun(start_time)))
 
 # OUTPUT
 # Melhor Caminho: Cidade 0 -> Cidade 1 -> Cidade 2 -> Cidade 4 -> Cidade 3 -> Cidade 0
 # Menor Distância: 15
 # --- 0.0004673004150390625 seconds ---
+
+
+def graph_show(matriz_adjancente, caminho=[]):
+    matriz = np.array(matriz_adjancente)
+
+    # Criar um grafo a partir da matriz de adjacências
+    G = nx.from_numpy_array(matriz)
+
+    # Calcular o layout do grafo mantendo a distância entre as cidades
+    pos = nx.spring_layout(G, seed=42)
+
+    # Obter os pesos das arestas
+    edge_labels = {
+        (i, j): matriz[i][j]
+        for i, row in enumerate(matriz)
+        for j, weight in enumerate(row)
+        if weight > 0
+    }
+
+    # Desenhar todas as arestas com rótulos em segundo plano
+    nx.draw_networkx_edges(
+        G, pos, edgelist=G.edges(), edge_color="gray", width=1, alpha=0.5
+    )
+
+    if len(caminho) > 0:
+        path_edges = [(caminho[i], caminho[i + 1]) for i in range(len(caminho) - 1)]
+        nx.draw_networkx_edges(G, pos, edgelist=path_edges, edge_color="red", width=2)
+
+    # Desenhar o grafo com os nós em primeiro plano
+    nx.draw(G, pos, with_labels=True, font_weight="bold")
+
+    for (i, j), label in edge_labels.items():
+        x = (pos[i][0] + pos[j][0]) / 2
+        y = (pos[i][1] + pos[j][1]) / 2
+
+        plt.text(
+            x,
+            y,
+            str(label),
+            color="black",
+            ha="center",
+            va="center",
+            backgroundcolor="white",
+            bbox=dict(facecolor="white", edgecolor="none", boxstyle="round,pad=0.1"),
+            fontsize=8,
+        )
+
+    return plt.show()
+
+
+matriz_adjancente = []
+
+for i, value in enumerate(matriz_distancias):
+    matriz_adjancente.append([])
+
+    for j in value:
+        matriz_adjancente[i].append(j if j != float("inf") else 0)
+
+melhor_caminho.append(melhor_caminho[0])
+graph_show(matriz_adjancente, melhor_caminho)
