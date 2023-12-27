@@ -21,3 +21,4 @@ Cada atividade/projeto da disciplina está contida em uma branch separada
 | Estrutura de dados não lineares | Desafio 03 - Predador x Presa | [nonlinear-data-structure/challenge-predador-presa](https://github.com/Talismar/ifrn-ads/tree/nonlinear-data-structure/challenge-predador-presa) |
 | Estrutura de dados não lineares | Desafio 04 - Caxeiro viajante por força bruta | [nonlinear-data-structure/brute-force-traveling-salesman](https://github.com/Talismar/ifrn-ads/tree/nonlinear-data-structure/brute-force-traveling-salesman) |
 | Teste de software | TDD - Desenvolvimento Dirigido a Teste | [software-testing/activity-tdd](https://github.com/Talismar/ifrn-ads/tree/software-testing/activity-tdd) |
+| Estrutura de dados não lineares | Algoritmos para caminho mínimo | [nonlinear-data-structure/algorithms-for-shortest-path](https://github.com/Talismar/ifrn-ads/tree/nonlinear-data-structure/algorithms-for-shortest-path) |
